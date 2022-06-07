@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as Yup from "yup";
 
-import { useForm } from "react-hook-form";
+import { useForm, FieldValues } from "react-hook-form";
 import {
   Stack,
   TextField,
@@ -24,7 +24,7 @@ export default function ChangePassword() {
       .min(3, "Password must be at 3 char long"),
 
     confirmPassword: Yup.string()
-      .required("Password is required")
+      .required("Confirm Password is required")
       .oneOf([Yup.ref("newPassword")], "Passwords don't match"),
   });
   const formOptions = { resolver: yupResolver(formSchema) };
@@ -34,7 +34,7 @@ export default function ChangePassword() {
     formState: { errors },
   } = useForm(formOptions);
 
-  const onSubmit = (data: any) => {
+  const onSubmit = (data: FieldValues) => {
     alert(JSON.stringify(data));
   };
   return (
