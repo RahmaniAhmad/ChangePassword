@@ -7,14 +7,18 @@
     "react",
     "starter"
   ],
-  "main": "src/index.tsx",
+  "main": "dist/index",
+  "typings": "dist/index",
   "dependencies": {
     "@emotion/react": "11.9.0",
     "@emotion/styled": "11.8.1",
     "@hookform/resolvers": "2.8.8",
-    "@material-ui/core": "4.12.4",
+    "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "4.11.3",
     "@mui/material": "5.6.4",
+    "@testing-library/jest-dom": "^5.16.4",
+    "@testing-library/react": "^13.2.0",
+    "@testing-library/user-event": "^14.2.0",
     "react": "18.0.0",
     "react-dom": "18.0.0",
     "react-hook-form": "7.30.0",
@@ -22,6 +26,7 @@
     "yup": "0.32.11"
   },
   "devDependencies": {
+    "@types/jest": "^27.5.1",
     "@types/react": "17.0.20",
     "@types/react-dom": "17.0.9",
     "typescript": "4.4.2"
